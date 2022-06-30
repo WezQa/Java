@@ -14,12 +14,22 @@ public class Garage {
 		Garage.Vehicle.remove(v);
 	}
 
-	float bill = 0F;
+	static float bill = 0F;
 	{
 		for (Vehicle v : Garage.Vehicle) {
 			if (v instanceof Car) {
-				bill += v.getNoOfwheels() * 45;
+				bill += v.getNoOfwheels() * 55;
+				if (v instanceof MotorBike) {
+					bill += v.getNoOfwheels() * 37;
+					if (v instanceof EV) {
+						bill += v.getNoOfwheels() * 60;
+					}
+				}
 			}
 		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(bill);
 	}
 }
