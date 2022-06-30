@@ -7,4 +7,8 @@ public class Mini extends Car {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Mini() {
+		super(4, true, 5, true, false);
+	}
+
 }
